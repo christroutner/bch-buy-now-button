@@ -25,6 +25,10 @@ class GetBalance extends React.Component {
   }
 
   render () {
+    const id = Math.floor(Math.random() * 1000)
+    const productId = `blue-widget-${id}`
+    console.log(`productId: ${productId}`)
+
     return (
 
       <>
@@ -50,7 +54,7 @@ class GetBalance extends React.Component {
             <Col className='text-break' style={{ textAlign: 'center' }}>
               <Form name='prompt-cash-form' action='https://prompt.cash/pay' method='get'>
                 <input type='hidden' name='token' value='796-lQ3Ur73D' />
-                <input type='hidden' name='tx_id' value='widget-demo' />
+                <input type='hidden' name='tx_id' value={productId} />
                 <input type='hidden' name='amount' value='0.02' />
                 <input type='hidden' name='currency' value='USD' />
                 <input type='hidden' name='desc' value='Blue Widget' />
