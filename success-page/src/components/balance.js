@@ -4,7 +4,7 @@
 
 // Global npm libraries
 import React from 'react'
-import { Container, Row, Col, Form, Button, Spinner, Image } from 'react-bootstrap'
+import { Container, Row, Col, Spinner, Image } from 'react-bootstrap'
 
 // let _this
 
@@ -38,26 +38,11 @@ class GetBalance extends React.Component {
 
           <Row>
             <Col className='text-break' style={{ textAlign: 'center' }}>
-              <ul>
-                <li><b>Name:</b> Blue Widet</li>
-                <li><b>Price:</b> $0.02 USD</li>
-              </ul>
-            </Col>
-          </Row>
-          <br />
-
-          <Row>
-            <Col className='text-break' style={{ textAlign: 'center' }}>
-              <Form name='prompt-cash-form' action='https://prompt.cash/pay' method='get'>
-                <input type='hidden' name='token' value='796-lQ3Ur73D' />
-                <input type='hidden' name='tx_id' value='widget-demo' />
-                <input type='hidden' name='amount' value='0.02' />
-                <input type='hidden' name='currency' value='USD' />
-                <input type='hidden' name='desc' value='Blue Widget' />
-                <input type='hidden' name='return' value='http://localhost:3000/' />
-                <input type='hidden' name='callback' value='https://log.psfoundation.info/log' />
-                <Button variant='primary' type='submit'>Buy with BitcoinCash (BCH)</Button>
-              </Form>
+              <h2>Success!</h2>
+              <p>
+                Thank you for purchasing a Blue Widget! We will ship the widget
+                to you right away!
+              </p>
             </Col>
           </Row>
           <br />

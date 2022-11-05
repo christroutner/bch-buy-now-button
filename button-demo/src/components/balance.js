@@ -54,7 +54,7 @@ class GetBalance extends React.Component {
                 <input type='hidden' name='amount' value='0.02' />
                 <input type='hidden' name='currency' value='USD' />
                 <input type='hidden' name='desc' value='Blue Widget' />
-                <input type='hidden' name='return' value='http://localhost:3000/' />
+                <input type='hidden' name='return' value='https://buy-button-success.fullstack.cash' />
                 <input type='hidden' name='callback' value='https://log.psfoundation.info/log' />
                 <Button variant='primary' type='submit'>Buy with BitcoinCash (BCH)</Button>
               </Form>
