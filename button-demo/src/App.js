@@ -8,11 +8,11 @@ import { useQueryParam, StringParam } from 'use-query-params'
 
 // Local libraries
 import './App.css'
-import LoadScripts from './components/load-scripts'
+// import LoadScripts from './components/load-scripts'
 import WaitingModal from './components/waiting-modal'
 import AsyncLoad from './services/async-load'
-import SelectServerButton from './components/servers/select-server-button'
-import Footer from './components/footer'
+// import SelectServerButton from './components/servers/select-server-button'
+// import Footer from './components/footer'
 import NavMenu from './components/nav-menu'
 import AppBody from './components/app-body'
 
@@ -64,22 +64,22 @@ class App extends React.Component {
         denyClose: true
       })
 
-      await this.asyncLoad.loadWalletLib()
+      // await this.asyncLoad.loadWalletLib()
 
-      this.addToModal('Getting alternative servers')
-      const servers = await this.asyncLoad.getServers()
+      // this.addToModal('Getting alternative servers')
+      // const servers = await this.asyncLoad.getServers()
       // console.log('servers: ', servers)
 
-      this.addToModal('Initializing wallet')
+      // this.addToModal('Initializing wallet')
       // console.log(`Initializing wallet with back end server ${serverUrl}`)
 
-      const wallet = await this.asyncLoad.initWallet(serverUrl)
+      // const wallet = await this.asyncLoad.initWallet(serverUrl)
 
       this.setState({
-        wallet,
-        serverUrl,
+        // wallet,
+        // serverUrl,
         // queryParamExists,
-        servers,
+        // servers,
         showStartModal: false,
         asyncInitFinished: true,
         asyncInitSucceeded: true,
@@ -117,7 +117,6 @@ class App extends React.Component {
     return (
       <>
         <GetRestUrl />
-        <LoadScripts />
         <NavMenu menuHandler={this.onMenuClick} />
 
         {
@@ -130,9 +129,6 @@ class App extends React.Component {
               />
             : <InitializedView wallet={this.state.wallet} menuState={this.state.menuState} appData={appData} />
         }
-
-        <SelectServerButton menuHandler={this.onMenuClick} />
-        <Footer appData={appData} />
       </>
     )
   }
